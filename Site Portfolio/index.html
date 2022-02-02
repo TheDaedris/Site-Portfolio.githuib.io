@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Portfolio - Sam'</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="#" onclick="return false">Samuel Bensalah</a>
+        </div>
+        <ul>
+            <li><a href="#" class="active">Présentation</a></li>
+            <li><a href="creations.html">Creations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <svg class="menubutton" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </header>
+
+    <section>
+        <div id="barrefond"></div>
+        <div id="barrefond2"></div>
+        <img src="SVG/3.svg" id="forme3" alt="Element de fond3">
+        <div id="rondfond"></div>
+
+        <div id="cadrehaut"></div>
+        
+        <img src="SVG/2.svg" id="forme2" alt="Element de fond2">
+        
+        
+        <img src="img/5.png" id="forme5" alt="Element de fond5">
+        <div class="cadrebas" id="cadrebas1"></div>
+        <div class="cadrebas" id="cadrebas2"></div>
+        <img src="SVG/4.svg" id="forme4" alt="Element de fond4">
+        <div class="cadrebas" id="cadrebas3"></div>
+        <img src="SVG/1.svg" id="forme1" alt="Element de fond1">
+        <a href="#" onclick="return false" id="welcome">Bienvenue !</a>
+        <img src="svg/Dark_theme.svg" id="dark" onclick="JourNuit()">
+    </section>
+
+    <!--TRANSITION A FAIRE-->
+    <div id="transition">
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="sec">
+        <h2>Du coup... Qui suis-je ?</h2>
+        <div class="flex">
+            <p>Moi ? Je m'appelle Samuel Bensalah.<br><br>
+            Passioné par tout ce qui se rapproche de l'informatique et de la création, j'ai commencé à vouloir créer des choses dés petit
+            (que ce soit des maps sur Far Cry 2, des constructions Lego, ou des sons sur Music 3000 sur PS2 (Les vrais connaissent)) et cette 
+            envie ne s'est jamais évaporée. En bref j'aime coder, utiliser des logiciels de dessin vectoriels ou non, de retouche photo, 
+            de 3D (je m'y lances tooout doucement mais je suis encore un débutant), de montage vidéo, et de musique. Ouais j'aime toucher à un 
+            peu tout, mais la spécialité programmation de mon DUT MMI va me permettre de me concentrer sur le codage de sites web. Je me verrais 
+            bien en tant que webdesigner plus tard.<br><br>
+            C'est quelque chose que j'aime faire. Donc je vais me concentrer sur deux choses désormais : Les builds sur Minecraft, 
+            et mes études sup' !<br><br>
+            A FINIR : Responsiveness, Mode Nuit (que j'ai perdu avec mon ancien PC), Créations (Trucs du stage)</p>
+            <img src="img/Pp_Glitchée2.png" width="50%" alt="Ma Tête là">
+        </div>
+        
+    </div>
+
+    <div class="flex">
+        <a href="creations.html" id="creations">Voir mes <br> créations
+            <div id="cadreHautGauche"></div>
+            <div id="cadreBasDroite"></div>
+            <div id="cadreHautDroite"></div>
+            <div id="cadreBasGauche"></div>
+        </a>
+    </div>
+</body>
+<script>
+    let image1 = document.getElementById('forme1');
+    let image3 = document.getElementById('forme3');
+    let image4 = document.getElementById('forme4');
+    let transition = document.getElementById('transition');
+
+    window.addEventListener('scroll', function(){
+        let roulette = window.scrollY;
+        image3.style.top = roulette * 0.5 + 'px';
+        image4.style.transform = 'rotate(45deg) scaleY(0.7) translateX(-' + roulette * 0.75 + 'px)';
+        image1.style.transform = 'rotate(45deg) translateX('+ (roulette - 300) + 'px)';
+        transition.style.top = roulette + 'px';
+        document.querySelector("ul").classList.remove("ouvert")
+    })
+
+    function JourNuit(){
+        console.log("appuyé");
+        document.body.classList.toggle("nuit")
+    }
+
+    document.querySelector(".menubutton").addEventListener("click", Menu);
+
+    function Menu(){
+        console.log("Menu clicked");
+        document.querySelector("ul").classList.toggle("ouvert")
+    }
+</script>
+</html>
