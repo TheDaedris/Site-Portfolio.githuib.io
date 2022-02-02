@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +17,7 @@
             <li><a href="creations.html">Creations</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        <svg class="menubutton" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </header>
 
     <section>
@@ -51,13 +52,15 @@
         <div class="flex">
             <p>Moi ? Je m'appelle Samuel Bensalah.<br><br>
             Passioné par tout ce qui se rapproche de l'informatique et de la création, j'ai commencé à vouloir créer des choses dés petit
-            (que ce soit des maps sur Far Cry 2, des sons sur Music 3000 sur PS2 (Les vrais connaissent) ou des constructions Lego) et cette envie ne s'est jamais évaporée. En bref j'aime coder
-            (surtout quand je comprends ce que je fais), utiliser des logiciels de dessin (vectoriels ou non), de retouche photo, de 3D
-            (je m'y lances tooout doucement mais je suis encore un débutant), de montage vidéo, et de musique. Ouais j'aime toucher à un peu tout, mais la spécialité programmation
-            de mon DUT MMI va me permettre de me concentrer sur le codage de sites web. Je me verrais bien en tant que webdesigner plus tard.<br><br>
-            C'est quelque chose que j'aime faire. Donc je vais me concentrer sur deux choses désormais : Les builds sur Minecraft, et mes études sup' !<br><br>
-            A FINIR : Responsiveness, Mode Nuit (que j'ai perdu avec mon ancien PC), Créations</p>
-            <img src="img/Pp_Glitchée2.png" height="700px" alt="Ma Tête là">
+            (que ce soit des maps sur Far Cry 2, des constructions Lego, ou des sons sur Music 3000 sur PS2 (Les vrais connaissent)) et cette 
+            envie ne s'est jamais évaporée. En bref j'aime coder, utiliser des logiciels de dessin vectoriels ou non, de retouche photo, 
+            de 3D (je m'y lances tooout doucement mais je suis encore un débutant), de montage vidéo, et de musique. Ouais j'aime toucher à un 
+            peu tout, mais la spécialité programmation de mon DUT MMI va me permettre de me concentrer sur le codage de sites web. Je me verrais 
+            bien en tant que webdesigner plus tard.<br><br>
+            C'est quelque chose que j'aime faire. Donc je vais me concentrer sur deux choses désormais : Les builds sur Minecraft, 
+            et mes études sup' !<br><br>
+            A FINIR : Responsiveness, Mode Nuit (que j'ai perdu avec mon ancien PC), Créations (Trucs du stage)</p>
+            <img src="img/Pp_Glitchée2.png" width="50%" alt="Ma Tête là">
         </div>
         
     </div>
@@ -83,11 +86,19 @@
         image4.style.transform = 'rotate(45deg) scaleY(0.7) translateX(-' + roulette * 0.75 + 'px)';
         image1.style.transform = 'rotate(45deg) translateX('+ (roulette - 300) + 'px)';
         transition.style.top = roulette + 'px';
+        document.querySelector("ul").classList.remove("ouvert")
     })
 
     function JourNuit(){
         console.log("appuyé");
         document.body.classList.toggle("nuit")
+    }
+
+    document.querySelector(".menubutton").addEventListener("click", Menu);
+
+    function Menu(){
+        console.log("Menu clicked");
+        document.querySelector("ul").classList.toggle("ouvert")
     }
 </script>
 </html>

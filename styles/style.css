@@ -55,6 +55,10 @@ header ul li a.active{
     text-transform: uppercase;
 }
 
+.menubutton{
+    position: absolute;
+    right:-100px;
+}
 /*******************/
 /******Section******/
 /*******************/
@@ -367,4 +371,55 @@ body.nuit #cadrebas3{
 
 body.nuit #cadrehaut{
     background: #EB7600;
+}
+
+/********************/
+/**** RESPONSIVE ****/
+/********************/
+@media screen and (max-width:815px){
+
+    ul{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        background: #FF3CFF;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        z-index:1;
+        margin:0;
+        padding: 0;
+        transform: translateY(-100%);
+        transition: 1s;
+    }
+    li{
+        margin-bottom:80px;
+        margin-top:80px;
+    }
+
+    .menubutton{
+        position: absolute;
+        right:10px;
+        top: 10px;
+        z-index:2;
+    }
+    .flex{
+        flex-direction: column;
+        margin:60px 10px;
+    }
+
+    .sec{
+        padding:10px;
+    }
+
+    p{
+        font-size: 0.8em;
+    }
+
+    .ouvert{
+        transform: translateY(0%);
+        transition: 1s;
+    }
 }
