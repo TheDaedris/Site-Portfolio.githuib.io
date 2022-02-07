@@ -6,6 +6,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <title>Portfolio - Sam'</title>
+
+    <style>
+    .flex>img{
+        min-width: 300px;
+    }
+        /******Section******/
+
+        section{
+            position:relative;
+            height:100vh;
+            width:100%;
+            overflow:hidden;
+        }
+
+        section>div, section>img{
+            position:absolute;
+        }
+
+        .cadrebas{
+            bottom:50px;
+        }
+
+        #cadrebas1{
+            background: #FF3CFF;
+            height: 20px;
+            width: 700px;
+            transform:translate(-135px, -140px) rotate(45deg)
+        }
+
+        #cadrebas2{
+            background: #FF3CFF;
+            height: 150px;
+            width: 560px;
+            transform:translate(-135px, -10px) rotate(45deg)
+        }
+
+        #cadrebas3{
+            background: #C51BFF;
+            height: 130px;
+            width: 250px;
+            transform:translate(-82px, 75px) rotate(45deg);
+        }
+
+        #cadrehaut{
+            background: #FF3CFF;
+            height: 150px;
+            width: 300px;
+            right:-50px;
+            top: -90px;
+            transform: rotate(25deg) scale(2)
+        }
+
+        #barrefond{
+        background: #E6E6E6;
+        width: 250px;
+        height: 1500px;
+        transform: translateY(-210px) rotate(35deg);
+        animation: barrefond1 7s infinite alternate
+        }
+
+        @keyframes barrefond1{
+            0%{transform: translate(0px, -210px) rotate(35deg);}
+            100%{transform:translate(900px, -210px) rotate(35deg);}
+        }
+
+        #barrefond2{
+            background: #E6E6E6;
+            width: 50px;
+            height: 1500px;
+            transform: translateY(-210px) rotate(35deg);
+            animation: barrefond2 8s infinite alternate;
+            }
+
+        @keyframes barrefond2{
+            0%{transform: translate(-200px, -210px) rotate(35deg);}
+            100%{transform:translate(1700px, -210px) rotate(35deg);}
+        }
+
+        #rondfond{
+            background:#E6E6E6;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            bottom:-150px;
+            right:-150px;
+        }
+
+        #forme1{
+        left: -200px;
+        bottom: 70px;
+        height: 17px;
+        width: 1212px;
+        transform:rotate(45deg);
+        }
+
+
+        #forme2{
+            width: 450px;
+            height: 450px;
+            bottom:-150px;
+            right:-150px;
+            animation: forme2 3s infinite;
+            animation-timing-function: linear;
+
+        }
+
+        @keyframes forme2{
+            0%{transform: rotate(0);}
+            100%{transform: rotate(1turn);}
+        }
+
+        #forme3{
+            top:30px;
+            left:30px;
+            width: 510px;
+            height: 1085px;
+            /*deplacement 90px*/
+        }
+
+        #forme4{
+        bottom:-230px;
+        left:-500px;
+        height: 401px;
+        width: 1614px;
+        transform: rotate(45deg) scaleY(0.7) translateX(0px);
+        /*deplacement 1614px*/
+        }
+
+        #forme5{
+            animation: forme5 7s infinite;
+            animation-timing-function: linear;
+            right: -850px;
+            }
+            
+        @keyframes forme5{
+            0%{transform: rotate(25deg) translate(441px, 100px);}
+            100%{transform: rotate(25deg) translate(0px, 100px);}
+        }
+
+        #welcome{
+            position:absolute;
+            top:40%;
+            left:20vw;
+            font-size:9vw;
+        }
+
+
+        /******Bouton Créations******/
+
+        #creations{
+            position: relative;
+            margin: 0px auto;
+            font-size: 40px;
+            padding: 30px 50px;
+            border: solid 5px #FF3CFF;
+            transition-duration: 0.5s;
+        }
+
+        #creations:hover{
+            text-shadow:0px 0px #FF3CFF;
+            padding: 50px 70px;
+            transition-duration: 0.5s;
+        }
+
+        #creations>div{
+            position:absolute;
+            width: 100px;
+            height: 100px;
+        }
+        #cadreHautGauche{
+            top:0;
+            left:0;
+            border-top: solid 5px #FF3CFF;
+            border-left: solid 5px #FF3CFF;
+        }
+
+        #cadreBasDroite{
+            bottom:0;
+            right:0;
+            border-bottom: solid 5px #FF3CFF;
+            border-right: solid 5px #FF3CFF;
+        }
+
+        #cadreHautDroite{
+            top:-15px;
+            right:-15px;
+            border-top: solid 5px #FF3CFF;
+            border-right: solid 5px #FF3CFF;
+        }
+
+        #cadreBasGauche{
+            bottom:-15px;
+            left: -15px;
+            border-bottom: solid 5px #FF3CFF;
+            border-left: solid 5px #FF3CFF;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -38,7 +235,8 @@
         <div class="cadrebas" id="cadrebas3"></div>
         <img src="SVG/1.svg" id="forme1" alt="Element de fond1">
         <a href="#" onclick="return false" id="welcome">Bienvenue !</a>
-        <img src="SVG/Dark_theme.svg" id="dark" onclick="JourNuit()">
+        <!--MODE NUIT A FAIRE-->
+        <!--<img src="svg/Dark_theme.svg" id="dark" onclick="JourNuit()">-->
     </section>
 
     <!--TRANSITION A FAIRE-->
@@ -58,8 +256,7 @@
             peu tout, mais la spécialité programmation de mon DUT MMI va me permettre de me concentrer sur le codage de sites web. Je me verrais 
             bien en tant que webdesigner plus tard.<br><br>
             C'est quelque chose que j'aime faire. Donc je vais me concentrer sur deux choses désormais : Les builds sur Minecraft, 
-            et mes études sup' !<br><br>
-            A FINIR : Responsiveness, Mode Nuit (que j'ai perdu avec mon ancien PC), Créations (Trucs du stage)</p>
+            et mes études sup' !</p>
             <img src="img/Pp_Glitchée2.png" width="50%" alt="Ma Tête là">
         </div>
         
