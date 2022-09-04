@@ -58,6 +58,7 @@ header ul li a.active{
 .menubutton{
     position: absolute;
     right:-100px;
+    display: none;
 }
 
 /*******************/
@@ -215,6 +216,7 @@ body.nuit #cadrehaut{
         right:10px;
         top: 10px;
         z-index:2;
+        display: block;
     }
     .flex{
         flex-direction: column;
